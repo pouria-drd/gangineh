@@ -1,5 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
+import { Navbar } from "@/components/layout";
 
 export const metadata: Metadata = {
     title: {
@@ -17,7 +18,10 @@ interface RootLayoutProps {
 function RootLayout({ children }: Readonly<RootLayoutProps>) {
     return (
         <html lang="fa-IR">
-            <body className={`antialiased r2l`}>{children}</body>
+            <body className={`antialiased r2l`}>
+                <Navbar />
+                {children}
+            </body>
         </html>
     );
 }
