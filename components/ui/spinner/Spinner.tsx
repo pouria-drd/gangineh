@@ -1,12 +1,12 @@
 import { cn } from "@/utils";
 import styles from "./spinner.module.css";
 
-interface LoadingSpinnerProps {
+interface SpinnerProps {
     className?: string;
     borderSize?: number | string; // Accept size as a prop to set the CSS variable --b
 }
 
-const LoadingSpinner = (props: LoadingSpinnerProps) => {
+const Spinner = (props: SpinnerProps) => {
     const { className, borderSize = 8 } = props; // Default value for --b is 8px
     const __b = borderSize + "px";
 
@@ -23,4 +23,4 @@ const LoadingSpinner = (props: LoadingSpinnerProps) => {
     );
 };
 
-export default LoadingSpinner;
+export default Spinner;
