@@ -12,7 +12,7 @@ const Spinner = (props: SpinnerProps) => {
 
     return (
         <div
-            className={cn(`${styles.loader} w-10`, className)}
+            className={cn(`${styles.loader} w-10 z-0`, className)}
             style={{ "--b": __b } as React.CSSProperties} // Pass --b dynamically
         >
             <div></div>

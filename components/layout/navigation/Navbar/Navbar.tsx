@@ -1,14 +1,20 @@
 "use client";
 
-import { useState } from "react";
 import { useScroll } from "@/hooks";
-import { Button } from "@/components/ui";
+import { SidebarButton } from "@/components/ui";
 import { GanginehIcon } from "@/components/icons";
 import { NavigationLinks } from "../NavigationLinks";
 
-const Navbar = () => {
+interface NavbarProps {
+    onOpenSidebar: () => void;
+}
+
+const Navbar = (props: NavbarProps) => {
     const [isScrolled] = useScroll(50);
-    // const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
+
+    function handleSidebarButtonClick() {
+        props.onOpenSidebar();
+    }
 
     return (
         <nav
@@ -21,16 +27,10 @@ const Navbar = () => {
             {/* Navigation Links */}
             <NavigationLinks className="hidden sm:flex" />
 
-            {/* <div className="flex items-center gap-4">
-                <NavigationLinks />
-
-                <Button
-                    btnType="dark"
-                    outline={!isAuthenticated}
-                    onClick={() => setIsAuthenticated(!isAuthenticated)}>
-                    {isAuthenticated ? "Logout" : "Login"}
-                </Button>
-            </div> */}
+            <SidebarButton
+                className="sm:hidden"
+                onClick={handleSidebarButtonClick}
+            />
         </nav>
     );
 };

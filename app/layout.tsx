@@ -1,6 +1,6 @@
 import "./styles/globals.css";
 import type { Metadata } from "next";
-import { Navbar } from "@/components/layout";
+import { Navigation } from "@/components/layout/navigation";
 
 export const metadata: Metadata = {
     title: {
@@ -19,7 +19,7 @@ function RootLayout({ children }: Readonly<RootLayoutProps>) {
     return (
         <html lang="en">
             <body className={`antialiased min-h-dvh`}>
-                <Navbar />
+                <Navigation />
                 {children}
             </body>
         </html>

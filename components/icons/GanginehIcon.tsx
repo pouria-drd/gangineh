@@ -15,7 +15,7 @@ const GanginehIcon = (props: GanginehIconProps) => {
                 height={512}
                 alt="GanginehIcon"
                 src="/assets/images/png/GanginehIcon.png"
-                className={cn("w-10", props.className)}
+                className={cn("w-9 sm:w-10", props.className)}
             />
         </Link>
     );
