@@ -1,4 +1,4 @@
-import "./globals.css";
+import "./styles/globals.css";
 import type { Metadata } from "next";
 import { Navbar } from "@/components/layout";
 
@@ -18,7 +18,7 @@ interface RootLayoutProps {
 function RootLayout({ children }: Readonly<RootLayoutProps>) {
     return (
         <html lang="fa-IR">
-            <body className={`antialiased r2l`}>
+            <body className={`antialiased`}>
                 <Navbar />
                 {children}
             </body>

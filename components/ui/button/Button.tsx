@@ -44,7 +44,7 @@ const Button = ({
         hover:bg-gradient-to-b hover:from-zinc-600 hover:to-zinc-800`,
 
         light: `border border-zinc-300 hover:border-none
-        bg-transparent text-zinc-800 hover:text-black hover:bg-zinc-200`,
+        bg-transparent text-zinc-700 hover:text-black hover:bg-zinc-100`,
     };
 
     const filledStyles = {
@@ -56,7 +56,7 @@ const Button = ({
         disabled:from-zinc-600 disabled:to-zinc-800
         hover:from-zinc-700 hover:to-zinc-800 text-drd-primary-50`,
 
-        light: `bg-zinc-200 hover:bg-zinc-300 disabled:hover:bg-zinc-200 text-zinc-800`,
+        light: `bg-zinc-100 hover:bg-zinc-200 disabled:hover:bg-zinc-100 text-zinc-700`,
     };
 
     const buttonType = outline ? outlineStyles[btnType] : filledStyles[btnType];
