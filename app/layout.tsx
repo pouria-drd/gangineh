@@ -4,11 +4,11 @@ import { Navbar } from "@/components/layout";
 
 export const metadata: Metadata = {
     title: {
-        default: "گنجینه",
-        template: "گنجینه | %s",
+        default: "Gangineh",
+        template: "Gangineh | %s",
     },
 
-    description: "گنجینه، جایی برای گنج‌ها",
+    description: "Gangineh, a place for treasures.",
 };
 
 interface RootLayoutProps {
@@ -17,7 +17,7 @@ interface RootLayoutProps {
 
 function RootLayout({ children }: Readonly<RootLayoutProps>) {
     return (
-        <html lang="fa-IR">
+        <html lang="en">
             <body className={`antialiased`}>
                 <Navbar />
                 {children}
