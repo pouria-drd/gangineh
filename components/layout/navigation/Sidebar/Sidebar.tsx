@@ -103,11 +103,11 @@ const Sidebar = (props: SidebarProps) => {
                                             : "flex-row-reverse"
                                     } items-center gap-1`}>
                                 <span
-                                    className="text-4xl text-drd-neutral-900
+                                    className="text-3xl text-drd-neutral-900
                                     font-bold font-sans uppercase">
                                     Gangineh
                                 </span>
-                                <GanginehIcon />
+                                <GanginehIcon className="w-7 xs:w-8 sm:w-9" />
                             </div>
                             <CloseButton
                                 onClick={props.onCloseSidebar}
