@@ -15,7 +15,9 @@ const NavLink = (props: NavLinkProps) => {
             <Link
                 href={props.href}
                 className={`${
-                    props.isActive ? "text-drd-primary" : "text-drd-neutral-600"
+                    props.isActive
+                        ? "text-drd-primary"
+                        : "text-drd-neutral-600 hover:text-neutral-700"
                 } font-sans font-semibold`}>
                 {props.children}
             </Link>

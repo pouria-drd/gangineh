@@ -18,7 +18,7 @@ interface RootLayoutProps {
 function RootLayout({ children }: Readonly<RootLayoutProps>) {
     return (
         <html lang="en">
-            <body className={`antialiased`}>
+            <body className={`antialiased min-h-dvh`}>
                 <Navbar />
                 {children}
             </body>
