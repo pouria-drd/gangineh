@@ -1,7 +1,7 @@
 .drdSidebar {
     @apply fixed top-0 
     bg-gradient-to-b 
-    from-drd-primary-100 from-25%
+    from-drd-primary-50 from-25%
     to-white sm:hidden
     px-4 py-5 z-20 h-dvh;
 }
