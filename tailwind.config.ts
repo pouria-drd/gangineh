@@ -22,32 +22,32 @@ export default {
             colors: {
                 drd: {
                     primary: {
-                        DEFAULT: "#64974b",
-                        "50": "#f2f7ee",
-                        "100": "#e1eed9",
-                        "200": "#c7deb8",
-                        "300": "#a3c88e",
-                        "400": "#82b269",
-                        "500": "#64974b",
-                        "600": "#4a7337",
-                        "700": "#3d5c2f",
-                        "800": "#334b29",
-                        "900": "#2e4126",
-                        "950": "#152211",
+                        DEFAULT: "#2563eb", // Main blue color (primary brand color)
+                        "50": "#eff4ff", // Very light blue for backgrounds (soft accents)
+                        "100": "#dbe6fe", // Light blue for subtle highlights
+                        "200": "#bfd3fe", // Light blue for accents
+                        "300": "#93b4fd", // Moderate blue for buttons or links
+                        "400": "#6090fa", // Stronger blue for call-to-action elements
+                        "500": "#3b76f6", // Base blue for regular UI elements
+                        "600": "#2563eb", // Primary blue for main interactive elements
+                        "700": "#1d58d8", // Darker blue for focus states or hover effects
+                        "800": "#1e4baf", // Deeper blue for borders or strong contrast elements
+                        "900": "#1e408a", // Very dark blue for deep contrast elements
+                        "950": "#172a54", // Deepest blue for dark background accents
                     },
 
                     neutral: {
-                        50: "#f7f8f8",
-                        100: "#edeef1",
-                        200: "#d8dbdf",
-                        300: "#b6bac3",
-                        400: "#8e95a2",
-                        500: "#6b7280",
-                        600: "#5b616e",
-                        700: "#4a4e5a",
-                        800: "#40444c",
-                        900: "#383a42",
-                        950: "#25272c",
+                        "50": "#f6f7f9", // Soft white for background or light sections
+                        "100": "#eceef2", // Very light gray for subtle borders or sections
+                        "200": "#d5d9e2", // Light gray for secondary sections or borders
+                        "300": "#b1bbc8", // Cool gray for headings or secondary elements
+                        "400": "#8695aa", // Moderate gray for body text or muted UI elements
+                        "500": "#64748b", // Neutral gray for text on light backgrounds
+                        "600": "#526077", // Stronger gray for text on darker backgrounds
+                        "700": "#434e61", // Deep gray for dark mode text or borders
+                        "800": "#3a4252", // Darker gray for dark backgrounds or text
+                        "900": "#343a46", // Very dark gray for high contrast text or UI
+                        "950": "#23272e", // Deepest gray for dark mode backgrounds or accents
                     },
                 },
             },
