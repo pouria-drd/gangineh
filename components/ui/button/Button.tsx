@@ -32,12 +32,12 @@ const Button = ({
     ...rest
 }: Props) => {
     const baseStyles = `flex items-center justify-center
-    transition-all text-base rounded-lg px-6 h-9 min-h-9 min-w-24`;
+    transition-all text-base rounded-md px-6 h-9 min-h-9 min-w-24 cursor-pointer`;
 
     const outlineStyles = {
         primary: `border border-drd-primary hover:border-none
         bg-transparent text-drd-primary hover:text-white
-        hover:bg-gradient-to-b hover:from-drd-primary hover:to-drd-primary-600`,
+        hover:bg-gradient-to-b hover:from-drd-primary hover:to-drd-primary-900`,
 
         dark: `border border-zinc-800 hover:border-none
         bg-transparent text-zinc-800 hover:text-white
@@ -48,9 +48,9 @@ const Button = ({
     };
 
     const filledStyles = {
-        primary: `bg-gradient-to-b from-drd-primary to-drd-primary-600
-        disabled:from-drd-primary-400 disabled:to-drd-primary-500
-        hover:from-drd-primary-600 hover:to-drd-primary-700 text-drd-primary-50`,
+        primary: `bg-gradient-to-b from-drd-primary to-drd-primary-900
+        disabled:from-drd-primary-400 disabled:to-drd-primary-700
+        hover:from-drd-primary hover:to-drd-primary-800 text-drd-primary-50`,
 
         dark: `bg-gradient-to-b from-zinc-600 to-zinc-800
         disabled:from-zinc-600 disabled:to-zinc-800
