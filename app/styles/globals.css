@@ -4,7 +4,7 @@
 
 body {
     font-family: PeydaWebFaNum, Arial, Helvetica, sans-serif;
-    @apply bg-gradient-to-br from-drd-primary-50 to-white;
+    @apply bg-gradient-to-b bg-drd-primary-100 from-drd-primary-100 to-white;
 }
 
 .r2l {

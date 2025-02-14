@@ -111,8 +111,9 @@ const Sidebar = (props: SidebarProps) => {
                             </div>
                             <CloseButton
                                 onClick={props.onCloseSidebar}
-                                className={`bg-drd-primary-100 hover:bg-drd-primary-200
-                                transition-all text-drd-primary-600 p-1 rounded-lg`}
+                                className={`bg-drd-primary-200 transition-all
+                                bg-opacity-65 hover:bg-opacity-100
+                                text-drd-primary p-1 rounded-lg`}
                             />
                         </div>
                     </motion.aside>

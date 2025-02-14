@@ -18,9 +18,11 @@ const Navbar = (props: NavbarProps) => {
 
     return (
         <nav
-            className={`${
-                isScrolled ? "bg-drd-primary-50" : "bg-transparent"
-            } sticky top-0 z-10 flex items-center justify-between p-4`}>
+            className={`sticky top-0 z-10 ${
+                isScrolled
+                    ? "bg-drd-primary-100 bg-opacity-90 glass-effect"
+                    : "bg-transparent"
+            } flex items-center justify-between p-4`}>
             {/* Logo */}
             <GanginehIcon />
 
