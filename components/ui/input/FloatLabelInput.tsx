@@ -1,6 +1,7 @@
 "use client";
 
 import { cn } from "@/utils";
+import styles from "./floatInput.module.css";
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     label: string;
@@ -29,16 +30,11 @@ const FloatLabelInput = ({
                 id={uniqueId} // Set unique ID for accessibility
                 dir={dir} // Apply text direction
                 className={cn(
-                    `outline-none transition-all peer
-                    text-sm text-drd-neutral-800
-                    placeholder:text-transparent placeholder:text-xs
-                    border rounded-md px-2 w-full h-10 min-h-10
+                    `peer ${styles.drdFloatInput}
                     ${
                         error
-                            ? `bg-red-50 border-red-200
-                            focus:border-red-600 selection:bg-red-200`
-                            : `bg-drd-primary-50 selection:bg-drd-primary-200
-                            focus:border-drd-primary border-drd-primary-100`
+                            ? `${styles.drdFloatInputError}`
+                            : `${styles.drdFloatInputNormal}`
                     }`,
                     className
                 )}
@@ -51,7 +47,7 @@ const FloatLabelInput = ({
                     htmlFor={uniqueId}
                     className={cn(
                         `absolute px-1 text-xs transition-all
-                        bg-drd-primary-50
+                        bg-white
                         
                         border-x
                         peer-placeholder-shown:border-transparent
@@ -69,8 +65,8 @@ const FloatLabelInput = ({
 
                         ${
                             error
-                                ? `peer-placeholder-shown:top-[21px] border-red-200
-                                peer-focus:border-red-600 text-red-400 peer-focus:text-red-600 bg-red-50`
+                                ? `peer-placeholder-shown:top-[20px] border-red-200
+                                peer-focus:border-red-600 text-red-400 peer-focus:text-red-600`
                                 : `peer-focus:border-drd-primary
                                 border-drd-primary-100 text-drd-primary-300 peer-focus:text-drd-primary`
                         }
@@ -83,7 +79,9 @@ const FloatLabelInput = ({
 
             {/* Error message */}
             {error && (
-                <span className="text-xs text-red-600 w-full">{error}</span>
+                <span className={`${styles.drdFloatInputErrorMessage}`}>
+                    {error}
+                </span>
             )}
         </div>
     );

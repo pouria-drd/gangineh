@@ -1,0 +1,19 @@
+.drdFloatInput {
+    @apply outline-none transition-all
+    text-sm text-drd-neutral-800 bg-white
+    placeholder:text-transparent placeholder:text-xs
+    border rounded-md px-2 w-full h-9 min-h-9;
+}
+
+.drdFloatInputNormal {
+    @apply border-drd-primary-300 focus:border-drd-primary selection:bg-drd-primary-200;
+}
+
+.drdFloatInputError {
+    @apply border-red-400 focus:border-red-600 selection:bg-red-200;
+}
+
+/* Error Message ---------------------------------------------------------------------- */
+.drdFloatInputErrorMessage {
+    @apply text-xs text-red-500 px-1;
+}
