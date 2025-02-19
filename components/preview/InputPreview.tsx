@@ -8,7 +8,7 @@ const InputPreview = (props: InputPreviewProps) => {
     return (
         <div className={cn("space-y-12", props.className)}>
             <div className="flex flex-col items-center text-center">
-                <h1 className="title-small">Inputs</h1>
+                <h1 className="title-medium">Inputs</h1>
 
                 <p className="text-p-medium max-w-xs sm:max-w-md">
                     This is a preview of the input component. The input contains

@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./sidebar.module.css";
-import { useEffect, useRef } from "react";
+import { useClickOutside } from "@/hooks";
 import { CloseButton } from "@/components/ui";
 import { GanginehIcon } from "@/components/icons";
 import { AnimatePresence, motion, Variants } from "framer-motion";
@@ -16,31 +16,8 @@ interface SidebarProps {
 const Sidebar = (props: SidebarProps) => {
     const side = props.side || "right";
 
-    const container = useRef<HTMLDivElement | null>(null);
-
-    const handleClickOutside = (event: MouseEvent) => {
-        if (
-            container.current &&
-            !container.current.contains(event.target as Node)
-        ) {
-            props.onCloseSidebar(); // Close sidebar if clicked outside
-        }
-    };
-
-    useEffect(() => {
-        if (props.isOpen) {
-            // Add event listener for clicks outside when sidebar is open
-            document.addEventListener("mousedown", handleClickOutside);
-        } else {
-            // Clean up the event listener when sidebar is closed
-            document.removeEventListener("mousedown", handleClickOutside);
-        }
-
-        return () => {
-            // Cleanup event listener on component unmount
-            document.removeEventListener("mousedown", handleClickOutside);
-        };
-    }, [props.isOpen]);
+    // Attach the click-outside hook to the wrapper element
+    const sidebarRef = useClickOutside<HTMLDivElement>(props.onCloseSidebar);
 
     const containerVariants: Variants = {
         initial: {
@@ -80,7 +57,7 @@ const Sidebar = (props: SidebarProps) => {
                         />
                     )}
                     <motion.aside
-                        ref={container}
+                        ref={sidebarRef}
                         variants={containerVariants}
                         initial="initial"
                         animate="visible"

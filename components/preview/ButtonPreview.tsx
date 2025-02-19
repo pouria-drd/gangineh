@@ -9,7 +9,7 @@ const ButtonPreview = (props: ButtonPreviewProps) => {
     return (
         <div className={cn("space-y-12", props.className)}>
             <div className="flex flex-col items-center text-center">
-                <h1 className="title-small">Buttons</h1>
+                <h1 className="title-medium">Buttons</h1>
 
                 <p className="text-p-medium max-w-xs sm:max-w-md">
                     This is a preview of the buttons component. The buttons

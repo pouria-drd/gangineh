@@ -1,4 +1,9 @@
-import { Typography, InputPreview, ButtonPreview } from "@/components/preview";
+import {
+    Typography,
+    InputPreview,
+    ButtonPreview,
+    DropdownPreview,
+} from "@/components/preview";
 
 function RootPage() {
     return (
@@ -9,6 +14,8 @@ function RootPage() {
             />
 
             <ButtonPreview className="border-t border-t-drd-neutral-400 py-8" />
+
+            <DropdownPreview className="border-t border-t-drd-neutral-400 py-8" />
 
             <InputPreview className="border-t border-t-drd-neutral-400 py-8" />
         </div>
