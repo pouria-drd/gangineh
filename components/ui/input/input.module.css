@@ -1,0 +1,32 @@
+.drdInput {
+    @apply outline-none transition-all 
+    text-drd-neutral-800 text-sm bg-white
+    placeholder:text-xs placeholder:text-drd-neutral-400
+    border rounded-md px-2 w-full h-9 min-h-9;
+}
+
+.drdInputNormal {
+    @apply border-drd-primary-300 focus:border-drd-primary selection:bg-drd-primary-200;
+}
+
+.drdInputError {
+    @apply border-red-400 focus:border-red-600 selection:bg-red-200;
+}
+
+/* Label ---------------------------------------------------------------------- */
+.drdInputLabel {
+    @apply text-sm px-1;
+}
+
+.drdInputLabelNormal {
+    @apply text-drd-neutral-700;
+}
+
+.drdInputLabelError {
+    @apply text-red-500;
+}
+
+/* Error Message ---------------------------------------------------------------------- */
+.drdInputErrorMessage {
+    @apply text-xs text-red-500 px-1;
+}

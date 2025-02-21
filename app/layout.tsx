@@ -1,14 +1,25 @@
-import "./globals.css";
+import "./styles/globals.css";
 import type { Metadata } from "next";
-import { Navbar } from "@/components/layout";
+import { Geist, Geist_Mono } from "next/font/google";
+import { Navigation } from "@/components/layout/Navigation";
+
+const geistSans = Geist({
+    variable: "--font-geist-sans",
+    subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+    variable: "--font-geist-mono",
+    subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
     title: {
-        default: "گنجینه",
-        template: "گنجینه | %s",
+        default: "Gangineh",
+        template: "Gangineh | %s",
     },
 
-    description: "گنجینه، جایی برای گنج‌ها",
+    description: "Gangineh, a place for treasures.",
 };
 
 interface RootLayoutProps {
@@ -17,12 +28,16 @@ interface RootLayoutProps {
 
 function RootLayout({ children }: Readonly<RootLayoutProps>) {
     return (
-        <html lang="fa-IR">
-            <body className={`antialiased r2l`}>
-                <Navbar />
+        <html lang="en">
+            <body
+                className={`${geistSans.variable} ${geistMono.variable} 
+                font-[family-name:var(--font-geist-mono)]
+                antialiased min-h-dvh`}>
+                <Navigation />
                 {children}
             </body>
         </html>
+        // font-[family-name:var(--font-geist-mono)]
     );
 }
 

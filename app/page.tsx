@@ -1,32 +1,23 @@
-import { Button } from "@/components/ui/button";
+import {
+    Typography,
+    InputPreview,
+    ButtonPreview,
+    DropdownPreview,
+} from "@/components/preview";
 
 function RootPage() {
     return (
-        <div className="max-w-xs mx-auto">
-            <div className="w-full space-y-4">
-                <div className="flex items-center justify-center">
-                    <Button className="mx-auto">Button</Button>
-                    <Button className="mx-auto" isBusy>
-                        Button
-                    </Button>
-                </div>
-                <div className="flex items-center justify-center">
-                    <Button className="mx-auto" btnType="dark">
-                        Button
-                    </Button>
-                    <Button className="mx-auto" btnType="dark" isBusy>
-                        Button
-                    </Button>
-                </div>
-                <div className="flex items-center justify-center">
-                    <Button className="mx-auto" btnType="light">
-                        Button
-                    </Button>
-                    <Button className="mx-auto" btnType="light" isBusy>
-                        Button
-                    </Button>
-                </div>
-            </div>
+        <div className="flex flex-col gap-12 px-4">
+            <Typography
+                className="border-t border-t-drd-neutral-400
+                first:border-none pt-12"
+            />
+
+            <ButtonPreview className="border-t border-t-drd-neutral-400 py-8" />
+
+            <DropdownPreview className="border-t border-t-drd-neutral-400 py-8" />
+
+            <InputPreview className="border-t border-t-drd-neutral-400 py-8" />
         </div>
     );
 }
