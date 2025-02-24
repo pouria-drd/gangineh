@@ -3,6 +3,7 @@ import {
     InputPreview,
     ButtonPreview,
     DropdownPreview,
+    ModalPreview,
 } from "@/components/preview";
 
 function RootPage() {
@@ -18,6 +19,8 @@ function RootPage() {
             <DropdownPreview className="border-t border-t-drd-neutral-400 py-8" />
 
             <InputPreview className="border-t border-t-drd-neutral-400 py-8" />
+
+            <ModalPreview className="border-t border-t-drd-neutral-400 py-8" />
         </div>
     );
 }

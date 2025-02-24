@@ -10,7 +10,12 @@ interface CloseButtonProps
 
 const CloseButton = (props: CloseButtonProps) => {
     return (
-        <button {...props} className={cn("", props.className)}>
+        <button
+            {...props}
+            className={cn(
+                "text-drd-neutral-900 hover:text-drd-neutral-950",
+                props.className
+            )}>
             <XMarkIcon />
         </button>
     );
