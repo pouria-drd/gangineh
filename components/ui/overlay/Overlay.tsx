@@ -8,7 +8,8 @@ interface OverlayProps {
 const Overlay = (props: OverlayProps) => {
     return (
         <motion.div
-            className="top-0 left-0 fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50"
+            className="top-0 left-0 fixed inset-0 
+            bg-black bg-opacity-50 backdrop-blur-sm z-50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
