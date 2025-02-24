@@ -1,6 +1,7 @@
 import "./styles/globals.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { ToastProvider } from "@/context/ToastContext";
 import { Navigation } from "@/components/layout/Navigation";
 
 const geistSans = Geist({
@@ -32,9 +33,12 @@ function RootLayout({ children }: Readonly<RootLayoutProps>) {
             <body
                 className={`${geistSans.variable} ${geistMono.variable} 
                 font-[family-name:var(--font-geist-mono)]
+                flex flex-col
                 antialiased min-h-dvh`}>
-                <Navigation />
-                {children}
+                <ToastProvider>
+                    <Navigation />
+                    <main className="flex-grow">{children}</main>
+                </ToastProvider>
             </body>
         </html>
         // font-[family-name:var(--font-geist-mono)]

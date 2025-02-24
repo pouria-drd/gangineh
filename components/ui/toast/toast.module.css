@@ -1,0 +1,51 @@
+.toast {
+    @apply flex fixed justify-between items-start rounded-lg rounded-r-none mx-auto
+    hover:!scale-105 transition-all shadow-lg cursor-default p-4 w-[80%] sm:w-80 z-[1000];
+
+    &.success {
+        @apply bg-green-50 text-green-700 border-r-4 border-green-700;
+
+        &.toastProgress {
+            @apply after:bg-green-700;
+        }
+    }
+
+    &.error {
+        @apply bg-red-50 text-red-600 border-r-4 border-red-600;
+
+        &.toastProgress {
+            @apply after:bg-red-600;
+        }
+    }
+
+    &.info {
+        @apply bg-blue-50 text-blue-700 border-r-4 border-blue-700;
+
+        &.toastProgress {
+            @apply after:bg-blue-700;
+        }
+    }
+
+    &.success button {
+        @apply text-green-700;
+    }
+
+    &.error button {
+        @apply text-red-600;
+    }
+
+    &.info button {
+        @apply text-blue-700;
+    }
+}
+
+.toastProgress::after {
+    left: 0;
+    width: 0;
+    bottom: 0;
+    height: 2px;
+    content: "";
+    display: block;
+    position: absolute;
+    animation: toast-progress-animation var(--toastDuration, 4s) linear forwards;
+}

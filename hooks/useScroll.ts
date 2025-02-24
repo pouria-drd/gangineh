@@ -13,7 +13,7 @@ import { useState, useEffect } from "react";
  *   // The user has scrolled past 100px
  * }
  */
-const useScroll = (threshold: number = 50) => {
+function useScroll(threshold: number = 50) {
     const [isScrolled, setIsScrolled] = useState<boolean>(false);
 
     useEffect(() => {
@@ -37,6 +37,6 @@ const useScroll = (threshold: number = 50) => {
 
     // Return the scroll state as a tuple (with `as const` for type inference)
     return [isScrolled] as const;
-};
+}
 
 export default useScroll;

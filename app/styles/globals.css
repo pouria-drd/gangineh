@@ -88,6 +88,15 @@ body {
     }
 }
 
+@keyframes toast-progress-animation {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
 /* ---------------------------------------------------------------------- */
 /* Fonts area */
 
